@@ -10,7 +10,7 @@ const interests = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gray-50 scroll-mt-20">
+    <section id="contact" className="py-16 md:py-24 bg-gray-50 scroll-mt-16 md:scroll-mt-[4.5rem]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <h2 className="section-heading">Contact</h2>
         <p className="prose-custom mb-8">
@@ -27,8 +27,14 @@ export default function Contact() {
         <div className="bg-white rounded-xl p-6 md:p-8 border border-gray-200 shadow-sm">
           <p className="font-semibold text-navy mb-4">For professional inquiries:</p>
           <div className="space-y-3">
-            <p className="text-gray-600">
-              <span className="font-medium text-navy">Email:</span> vamsheedharreddy@gmail.com
+            <p className="text-gray-600 break-words">
+              <span className="font-medium text-navy">Email:</span>{" "}
+              <a
+                href="mailto:vamsheedharreddy@gmail.com"
+                className="link-gold break-all"
+              >
+                vamsheedharreddy@gmail.com
+              </a>
             </p>
             <p>
               <span className="font-medium text-navy">LinkedIn:</span>{" "}

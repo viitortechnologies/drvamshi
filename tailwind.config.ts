@@ -26,7 +26,7 @@ const config: Config = {
       },
       backgroundImage: {
         "hero-gradient":
-          "linear-gradient(to bottom, rgba(30, 45, 74, 0.6) 0%, rgba(21, 34, 56, 0.75) 100%)",
+          "linear-gradient(to bottom, rgba(30, 45, 74, 0.55) 0%, rgba(21, 34, 56, 0.72) 55%, rgba(21, 34, 56, 0.85) 100%)",
       },
     },
   },

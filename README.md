@@ -37,4 +37,4 @@ A professional, minimal, and inspiring website for Dr. Vamsheedhar Reddy — Ass
 
 ## Assets
 
-Hero slider images are in `public/images/` (hero1.png, hero2.png, hero3.png). To update them, replace the files in `public/images/` or copy from `assets/slides/`.
+Hero slider images are in `public/images/` (hero1.webp, hero2.webp, hero3.webp). To update them, replace the files in `public/images/` or copy from `assets/slides/`.

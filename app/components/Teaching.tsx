@@ -9,7 +9,7 @@ const focusAreas = [
 
 export default function Teaching() {
   return (
-    <section id="teaching" className="py-16 md:py-24 bg-white scroll-mt-20">
+    <section id="teaching" className="py-16 md:py-24 bg-white scroll-mt-16 md:scroll-mt-[4.5rem]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <h2 className="section-heading">Teaching & Mentorship</h2>
 
