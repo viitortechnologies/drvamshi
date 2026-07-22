@@ -349,9 +349,9 @@ export const workshops = [
     image: "/images/event-ngit-iot.webp",
   },
   {
-    title: "Student lab mentoring",
-    detail: "Guiding CSE (AI & ML) students through embedded and IoT board experiments.",
-    image: "/images/teaching-lab.webp",
+    title: "Ugyan-2025 gathering",
+    detail: "Faculty and students together at the Ugyan-2025 academic celebration.",
+    image: "/images/event-ugyan-group.webp",
   },
   {
     title: "AIDIA / AI guest lecture",
