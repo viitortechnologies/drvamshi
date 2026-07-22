@@ -29,12 +29,6 @@ body {
   @apply font-sans text-navy antialiased bg-[#fafaf8] overflow-x-hidden;
 }
 
-/* Defer paint for below-fold sections */
-main > section:not(#home) {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 720px;
-}
-
 @layer components {
   .section-heading {
     @apply font-serif text-2xl sm:text-3xl md:text-4xl font-semibold text-navy mb-3 sm:mb-4 text-balance;
@@ -72,6 +66,13 @@ main > section:not(#home) {
 [data-reveal].is-revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (scripting: none) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 [data-reveal="left"] {

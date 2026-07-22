@@ -104,11 +104,10 @@ export default function HeroSlider() {
 
         {/* 3:2 photo frame — smaller, consistent ratio */}
         <div className="relative order-1 lg:order-2 flex items-center justify-center p-4 sm:p-5 lg:p-8 xl:p-10">
-          <div className="relative w-full max-w-xl lg:max-w-none aspect-[3/2] overflow-hidden bg-navy-dark rounded-xl border border-white/90 hero-frame">
+          <div className="relative w-full max-w-lg mx-auto lg:max-w-none aspect-[3/2] overflow-hidden bg-navy-dark rounded-xl border border-white/90 hero-frame">
             {heroSlides.map((item, i) => {
               const active = i === current;
               const shouldRender = loaded.has(i);
-              const fit = "object-cover";
 
               return (
                 <div
@@ -123,8 +122,8 @@ export default function HeroSlider() {
                       src={item.image}
                       alt={item.headline}
                       fill
-                      className={`${fit} object-center`}
-                      sizes="(max-width: 1023px) 100vw, 50vw"
+                      className="object-cover object-center"
+                      sizes="(max-width: 1023px) 92vw, 42vw"
                       priority={i === 0}
                       quality={78}
                       onLoad={() => markLoaded(i)}

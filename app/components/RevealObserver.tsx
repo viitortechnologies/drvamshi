@@ -8,13 +8,17 @@ export default function RevealObserver() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const nodes = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
+    const nodes = Array.from(
+      document.querySelectorAll<HTMLElement>("[data-reveal]")
+    );
     if (!nodes.length) return;
 
     nodes.forEach((el) => el.classList.remove("is-revealed"));
 
+    const reveal = (el: Element) => el.classList.add("is-revealed");
+
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      nodes.forEach((el) => el.classList.add("is-revealed"));
+      nodes.forEach(reveal);
       return;
     }
 
@@ -22,23 +26,38 @@ export default function RevealObserver() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-revealed");
+            reveal(entry.target);
             io.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -5% 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
     );
 
-    // Hero / first section reveal immediately
+    // First block + anything already on screen
     requestAnimationFrame(() => {
-      nodes.slice(0, 1).forEach((el) => el.classList.add("is-revealed"));
       nodes.forEach((el, i) => {
-        if (i > 0) io.observe(el);
+        if (i === 0) {
+          reveal(el);
+          return;
+        }
+        const rect = el.getBoundingClientRect();
+        const inView =
+          rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
+        if (inView) reveal(el);
+        else io.observe(el);
       });
     });
 
-    return () => io.disconnect();
+    // Safety: never leave page content stuck at opacity 0
+    const fallback = window.setTimeout(() => {
+      nodes.forEach(reveal);
+    }, 1800);
+
+    return () => {
+      io.disconnect();
+      window.clearTimeout(fallback);
+    };
   }, [pathname]);
 
   return null;
