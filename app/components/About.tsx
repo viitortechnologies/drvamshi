@@ -17,7 +17,7 @@ export default function About() {
         <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-10 mb-12">
           <div className="relative w-full max-w-[220px] sm:max-w-[240px] md:max-w-none md:w-72 self-center md:self-start flex-shrink-0 aspect-[3/4] rounded-lg overflow-hidden border border-gray-200/80 shadow-sm bg-gray-100">
             <Image
-              src="/images/Dr-Vamshi.webp"
+              src="/images/portrait-pro.webp"
               alt="Dr. Pillareddy Vamsheedhar Reddy"
               fill
               className="object-cover object-[center_15%]"

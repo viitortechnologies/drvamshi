@@ -19,6 +19,10 @@ const config: Config = {
           light: "#d4a84b",
           dark: "#8b6914",
         },
+        teal: {
+          DEFAULT: "#0f766e",
+          soft: "#ccfbf1",
+        },
       },
       fontFamily: {
         serif: ["var(--font-playfair)", "Georgia", "serif"],
