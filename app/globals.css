@@ -53,14 +53,13 @@ body {
   }
 }
 
-/* —— Section reveal animations —— */
+/* —— Section + card reveal animations —— */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(22px);
+  transform: translateY(28px);
   transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 [data-reveal].is-revealed {
@@ -76,50 +75,71 @@ body {
 }
 
 [data-reveal="left"] {
-  transform: translateX(-24px);
+  transform: translateX(-28px);
 }
 [data-reveal="left"].is-revealed {
   transform: translateX(0);
 }
 
 [data-reveal="right"] {
-  transform: translateX(24px);
+  transform: translateX(28px);
 }
 [data-reveal="right"].is-revealed {
   transform: translateX(0);
 }
 
 [data-reveal="scale"] {
-  transform: scale(0.97);
+  transform: scale(0.96);
 }
 [data-reveal="scale"].is-revealed {
   transform: scale(1);
 }
 
-/* Stagger children inside revealed blocks */
+/* Staggered cards inside a revealed section */
 [data-reveal].is-revealed .reveal-child {
   animation: rise-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+[data-reveal].is-revealed .reveal-child:nth-child(1) {
+  animation-delay: 0.04s;
+}
 [data-reveal].is-revealed .reveal-child:nth-child(2) {
-  animation-delay: 0.08s;
+  animation-delay: 0.1s;
 }
 [data-reveal].is-revealed .reveal-child:nth-child(3) {
   animation-delay: 0.16s;
 }
 [data-reveal].is-revealed .reveal-child:nth-child(4) {
-  animation-delay: 0.24s;
+  animation-delay: 0.22s;
 }
 [data-reveal].is-revealed .reveal-child:nth-child(5) {
-  animation-delay: 0.32s;
+  animation-delay: 0.28s;
 }
 [data-reveal].is-revealed .reveal-child:nth-child(6) {
+  animation-delay: 0.34s;
+}
+[data-reveal].is-revealed .reveal-child:nth-child(7) {
   animation-delay: 0.4s;
+}
+[data-reveal].is-revealed .reveal-child:nth-child(8) {
+  animation-delay: 0.46s;
+}
+[data-reveal].is-revealed .reveal-child:nth-child(9) {
+  animation-delay: 0.52s;
+}
+[data-reveal].is-revealed .reveal-child:nth-child(10) {
+  animation-delay: 0.58s;
+}
+[data-reveal].is-revealed .reveal-child:nth-child(11) {
+  animation-delay: 0.64s;
+}
+[data-reveal].is-revealed .reveal-child:nth-child(12) {
+  animation-delay: 0.7s;
 }
 
 @keyframes rise-in {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(18px);
   }
   to {
     opacity: 1;

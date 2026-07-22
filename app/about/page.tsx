@@ -172,7 +172,7 @@ export default function AboutPage() {
             {gallery.map((item) => (
               <figure
                 key={item.image}
-                className="rounded-xl overflow-hidden border border-gray-200 bg-gray-50 flex flex-col h-full"
+                className="reveal-child rounded-xl overflow-hidden border border-gray-200 bg-gray-50 flex flex-col h-full"
               >
                 <div className="relative aspect-[4/3] w-full bg-navy/5">
                   <Image
@@ -181,6 +181,8 @@ export default function AboutPage() {
                     fill
                     className={`object-cover ${item.position}`}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    quality={65}
+                    loading="lazy"
                   />
                 </div>
                 <figcaption className="p-3 text-sm text-gray-700 leading-snug flex-1">

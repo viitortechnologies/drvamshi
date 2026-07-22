@@ -25,7 +25,7 @@ export default function HomePage() {
               fill
               className="object-cover object-[center_20%]"
               sizes="(max-width: 1024px) 90vw, 400px"
-              quality={70}
+              quality={65}
               loading="lazy"
             />
           </div>
@@ -70,7 +70,7 @@ export default function HomePage() {
             ].map((item) => (
               <div
                 key={item.label}
-                className="text-center p-5 md:p-6 bg-white/90 rounded-xl border border-gray-100 shadow-sm"
+                className="reveal-child text-center p-5 md:p-6 bg-white/90 rounded-xl border border-gray-100 shadow-sm"
               >
                 <p className="font-serif text-2xl md:text-3xl font-semibold text-gold mb-2">
                   {item.value}
@@ -110,7 +110,7 @@ export default function HomePage() {
             {journals.slice(0, 3).map((paper) => (
               <article
                 key={paper.title}
-                className="p-5 rounded-xl border border-gray-200 bg-gray-50 hover:border-gold/30 transition-colors"
+                className="reveal-child p-5 rounded-xl border border-gray-200 bg-gray-50 hover:border-gold/30 transition-colors"
               >
                 <h3 className="font-serif text-lg font-semibold text-navy mb-1">
                   {paper.href ? (
@@ -165,6 +165,8 @@ export default function HomePage() {
                 fill
                 className="object-cover object-[center_30%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={65}
+                loading="lazy"
               />
             </div>
           </div>
@@ -172,15 +174,17 @@ export default function HomePage() {
             {workshops.map((w) => (
               <figure
                 key={w.title}
-                className="rounded-xl overflow-hidden border border-gray-200 bg-white"
+                className="reveal-child rounded-xl overflow-hidden border border-gray-200 bg-white"
               >
-                <div className="relative aspect-[16/10]">
+                <div className="relative aspect-[16/10] bg-navy/5">
                   <Image
                     src={w.image}
                     alt={w.detail}
                     fill
                     className="object-cover object-center"
                     sizes="(max-width: 640px) 100vw, 33vw"
+                    quality={65}
+                    loading="lazy"
                   />
                 </div>
                 <figcaption className="p-4">
@@ -211,7 +215,7 @@ export default function HomePage() {
             {featuredAwards.map((award) => (
               <figure
                 key={award.title}
-                className="rounded-xl overflow-hidden border border-gray-200 bg-gray-50 flex flex-col h-full"
+                className="reveal-child rounded-xl overflow-hidden border border-gray-200 bg-gray-50 flex flex-col h-full"
               >
                 <div className="relative aspect-[4/3] bg-white">
                   <Image
@@ -223,7 +227,9 @@ export default function HomePage() {
                         ? `object-cover ${award.position ?? "object-center"}`
                         : "object-contain p-2"
                     }
-                    sizes="(max-width: 640px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, 25vw"
+                    quality={65}
+                    loading="lazy"
                   />
                 </div>
                 <figcaption className="p-4 flex-1">

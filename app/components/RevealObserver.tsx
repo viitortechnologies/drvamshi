@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-/** Observes [data-reveal] elements and animates them into view once per page. */
+/** Scroll-reveal for [data-reveal] sections and cards. */
 export default function RevealObserver() {
   const pathname = usePathname();
 
@@ -31,28 +31,31 @@ export default function RevealObserver() {
           }
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
     );
 
-    // First block + anything already on screen
     requestAnimationFrame(() => {
       nodes.forEach((el, i) => {
+        // Hero / first block: show immediately
         if (i === 0) {
           reveal(el);
           return;
         }
         const rect = el.getBoundingClientRect();
-        const inView =
-          rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
-        if (inView) reveal(el);
-        else io.observe(el);
+        if (rect.top < window.innerHeight * 0.88 && rect.bottom > 40) {
+          reveal(el);
+        } else {
+          io.observe(el);
+        }
       });
     });
 
-    // Safety: never leave page content stuck at opacity 0
+    // Last-resort safety only (keep animations intact while scrolling)
     const fallback = window.setTimeout(() => {
-      nodes.forEach(reveal);
-    }, 1800);
+      nodes.forEach((el) => {
+        if (!el.classList.contains("is-revealed")) reveal(el);
+      });
+    }, 10000);
 
     return () => {
       io.disconnect();

@@ -6,43 +6,17 @@ import { heroSlides } from "../lib/content";
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
-  const [loaded, setLoaded] = useState(() => new Set([0]));
 
-  const markLoaded = useCallback((index: number) => {
-    setLoaded((prev) => {
-      if (prev.has(index)) return prev;
-      const next = new Set(prev);
-      next.add(index);
-      return next;
-    });
+  const goTo = useCallback((index: number) => {
+    setCurrent(index);
   }, []);
-
-  const goTo = useCallback(
-    (index: number) => {
-      markLoaded(index);
-      setCurrent(index);
-    },
-    [markLoaded]
-  );
-
-  useEffect(() => {
-    const id = window.setTimeout(() => {
-      markLoaded(1 % heroSlides.length);
-      markLoaded(2 % heroSlides.length);
-    }, 300);
-    return () => clearTimeout(id);
-  }, [markLoaded]);
 
   useEffect(() => {
     const t = setInterval(() => {
-      setCurrent((c) => {
-        const next = (c + 1) % heroSlides.length;
-        markLoaded(next);
-        return next;
-      });
+      setCurrent((c) => (c + 1) % heroSlides.length);
     }, 6500);
     return () => clearInterval(t);
-  }, [markLoaded]);
+  }, []);
 
   const slide = heroSlides[current];
 
@@ -102,13 +76,10 @@ export default function HeroSlider() {
           </div>
         </div>
 
-        {/* 3:2 photo frame — smaller, consistent ratio */}
         <div className="relative order-1 lg:order-2 flex items-center justify-center p-4 sm:p-5 lg:p-8 xl:p-10">
           <div className="relative w-full max-w-lg mx-auto lg:max-w-none aspect-[3/2] overflow-hidden bg-navy-dark rounded-xl border border-white/90 hero-frame">
             {heroSlides.map((item, i) => {
               const active = i === current;
-              const shouldRender = loaded.has(i);
-
               return (
                 <div
                   key={item.image}
@@ -117,18 +88,16 @@ export default function HeroSlider() {
                   }`}
                   aria-hidden={!active}
                 >
-                  {shouldRender && (
-                    <Image
-                      src={item.image}
-                      alt={item.headline}
-                      fill
-                      className="object-cover object-center"
-                      sizes="(max-width: 1023px) 92vw, 42vw"
-                      priority={i === 0}
-                      quality={78}
-                      onLoad={() => markLoaded(i)}
-                    />
-                  )}
+                  <Image
+                    src={item.image}
+                    alt={item.headline}
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 1023px) 92vw, 42vw"
+                    priority={i === 0}
+                    loading={i === 0 ? "eager" : "lazy"}
+                    quality={70}
+                  />
                 </div>
               );
             })}

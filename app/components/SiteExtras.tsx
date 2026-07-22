@@ -14,9 +14,9 @@ export function OutboundProfiles({
           Explore verified academic profiles for citations, works, and collaboration
           opportunities.
         </p>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {profileLinks.map((link) => (
-            <li key={link.href}>
+            <li key={link.href} className="reveal-child">
               <a
                 href={link.href}
                 target="_blank"

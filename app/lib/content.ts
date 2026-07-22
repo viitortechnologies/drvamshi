@@ -74,7 +74,7 @@ export const heroSlides = [
     size: "cover" as const,
   },
   {
-    image: "/images/hero-aidia.webp",
+    image: "/images/hero-ai-applications.webp",
     headline: "Academic Excellence with Integrity",
     subheading: "Research · Mentorship · Leadership",
     role: "Publications, patents, and peer review across leading venues",

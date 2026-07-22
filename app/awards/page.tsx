@@ -39,7 +39,7 @@ export default function AwardsPage() {
             {featuredAwards.map((award) => (
               <article
                 key={award.title}
-                className="rounded-xl overflow-hidden border border-gray-200 bg-gray-50 shadow-sm flex flex-col h-full"
+                className="reveal-child rounded-xl overflow-hidden border border-gray-200 bg-gray-50 shadow-sm flex flex-col h-full"
               >
                 <div className="relative aspect-[4/3] bg-white">
                   <Image
@@ -51,7 +51,9 @@ export default function AwardsPage() {
                         ? `object-cover ${award.position ?? "object-center"}`
                         : "object-contain p-3"
                     }
-                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    sizes="(max-width: 1024px) 100vw, 25vw"
+                    quality={65}
+                    loading="lazy"
                   />
                 </div>
                 <div className="p-5 flex-1">
@@ -80,7 +82,7 @@ export default function AwardsPage() {
             {reviewCertificates.map((cert) => (
               <figure
                 key={cert.journal}
-                className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm"
+                className="reveal-child rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm"
               >
                 <div className="relative aspect-[4/3] bg-gray-50">
                   <Image
@@ -89,6 +91,8 @@ export default function AwardsPage() {
                     fill
                     className="object-contain p-2"
                     sizes="(max-width: 640px) 100vw, 25vw"
+                    quality={65}
+                    loading="lazy"
                   />
                 </div>
                 <figcaption className="p-3">
@@ -135,15 +139,17 @@ export default function AwardsPage() {
               {workshops.map((w) => (
                 <figure
                   key={w.title}
-                  className="rounded-xl overflow-hidden border border-gray-200 bg-gray-50"
+                  className="reveal-child rounded-xl overflow-hidden border border-gray-200 bg-gray-50"
                 >
-                  <div className="relative aspect-[16/10]">
+                  <div className="relative aspect-[16/10] bg-navy/5">
                     <Image
                       src={w.image}
                       alt={w.detail}
                       fill
                       className="object-cover object-center"
                       sizes="(max-width: 640px) 100vw, 50vw"
+                      quality={65}
+                      loading="lazy"
                     />
                   </div>
                   <figcaption className="p-4">
