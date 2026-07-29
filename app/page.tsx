@@ -3,6 +3,7 @@ import Image from "next/image";
 import HeroSlider from "./components/HeroSlider";
 import {
   featuredAwards,
+  impactStats,
   journals,
   researchTopics,
   siteConfig,
@@ -32,13 +33,15 @@ export default function HomePage() {
           <div>
             <h2 className="section-heading">About {siteConfig.shortName}</h2>
             <p className="prose-custom text-lg mb-4">
-              A self-motivated educator and researcher with nearly a decade of
-              teaching experience and a full-time Ph.D. from VIT-AP University.
-              Currently {siteConfig.role} at {siteConfig.institution}.
+              Associate Professor in CSE (AI & ML) at{" "}
+              {siteConfig.institution}, Hyderabad. Ph.D. in Cloud Computing from
+              VIT University, with over 14 years of teaching and research in
+              emerging computing technologies.
             </p>
             <p className="prose-custom mb-6">
-              His work spans cloud–fog scheduling, energy-aware systems, and
-              applied AI—paired with hands-on mentoring in labs and workshops.
+              His interests span fog and cloud computing, deep learning, IoT, and
+              cybersecurity—paired with active mentoring of undergraduate and
+              postgraduate students. Senior Member of IEEE and IAENG.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -62,12 +65,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <h2 className="section-heading text-center mb-10">Impact at a glance</h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {[
-              { value: "9+ yrs", label: "Teaching experience" },
-              { value: "14+", label: "Publications" },
-              { value: "4", label: "Patents published" },
-              { value: "8", label: "Journal review recognitions" },
-            ].map((item) => (
+            {impactStats.map((item) => (
               <div
                 key={item.label}
                 className="reveal-child text-center p-5 md:p-6 bg-white/90 rounded-xl border border-gray-100 shadow-sm"
@@ -88,8 +86,8 @@ export default function HomePage() {
             <div>
               <h2 className="section-heading mb-2">Research spotlight</h2>
               <p className="prose-custom">
-                Energy-efficient workflow scheduling, multi-objective cloud–fog
-                optimization, and applied AI.
+                Fog and cloud computing, deep learning, IoT, and cybersecurity—with
+                22+ publications and four patents.
               </p>
             </div>
             <Link href="/research" className="link-gold font-medium whitespace-nowrap">

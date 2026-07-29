@@ -31,11 +31,15 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "Pillareddy Vamsheedhar Reddy",
+    "Associate Professor CSE AI ML",
     "cloud computing researcher",
-    "workflow scheduling",
+    "fog computing",
+    "deep learning",
+    "IoT",
+    "cybersecurity",
     "Keshav Memorial Engineering College",
-    "VIT-AP",
-    "machine learning professor Hyderabad",
+    "VIT University",
+    "IEEE Senior Member",
   ],
   authors: [{ name: siteConfig.name }],
   openGraph: {

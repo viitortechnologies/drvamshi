@@ -11,8 +11,8 @@ export default function Footer() {
               {siteConfig.shortName}
             </p>
             <p className="text-white/80 text-sm leading-relaxed">
-              {siteConfig.role} at {siteConfig.institution}. Research in cloud
-              scheduling, AI/ML, and student-centered teaching.
+              {siteConfig.role} at {siteConfig.institution}. Research in fog and
+              cloud computing, deep learning, IoT, and cybersecurity.
             </p>
           </div>
           <div>

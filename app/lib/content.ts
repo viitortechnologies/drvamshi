@@ -2,14 +2,42 @@ export const siteConfig = {
   name: "Dr. Pillareddy Vamsheedhar Reddy",
   shortName: "Dr. Vamsheedhar Reddy",
   title: "Educator · Researcher · Mentor",
-  role: "Assistant Professor, CSE – AI & ML",
+  role: "Associate Professor, CSE – AI & ML",
   institution: "Keshav Memorial Engineering College",
   location: "Hyderabad, Telangana, India",
   email: "pvamsheedharreddy@gmail.com",
   phone: "+91 99853 62363",
   siteUrl: "https://drvamshi.vercel.app",
   description:
-    "Educator and researcher specializing in cloud computing, AI/ML, and student mentorship. Explore publications, patents, teaching, and academic leadership of Dr. Pillareddy Vamsheedhar Reddy.",
+    "Associate Professor in CSE (AI & ML) at Keshav Memorial Engineering College, Hyderabad. Ph.D. in Cloud Computing from VIT University, with 14+ years of teaching, 22+ publications, four patents, and research in fog/cloud computing, deep learning, IoT, and cybersecurity.",
+};
+
+/** Full professional biography used on About and related pages */
+export const biography = [
+  "Dr. Pillareddy Vamsheedhar Reddy is an Associate Professor in the Department of Computer Science and Engineering (Artificial Intelligence & Machine Learning) at Keshav Memorial Engineering College, Hyderabad. He received his Ph.D. in Cloud Computing from VIT University. With over 14 years of teaching experience, he has made significant contributions to teaching and research in emerging computing technologies.",
+  "He has authored 6 SCIE-indexed journal articles, 2 Scopus-indexed journal articles, 17 international conference papers, 4 UGC CARE journal articles, one book, and holds four patents. He has organized and delivered several workshops on the Internet of Things (IoT) at academic institutions.",
+  "His research interests include Fog Computing, Cloud Computing, Deep Learning, Internet of Things (IoT), and Cybersecurity. He actively mentors undergraduate and postgraduate students and collaborates on research in intelligent computing. Dr. Reddy is a Senior Member of IEEE and IAENG and continues to contribute to research, innovation, and academic excellence through teaching, publications, and professional service.",
+];
+
+export const impactStats = [
+  { value: "14 yrs", label: "Teaching experience" },
+  { value: "22+", label: "Publications" },
+  { value: "4", label: "Patents published" },
+  { value: "8+", label: "Journal review recognitions" },
+];
+
+export const memberships = [
+  "Senior Member, IEEE",
+  "Senior Member, IAENG",
+];
+
+export const publicationSummary = {
+  scie: 6,
+  scopus: 2,
+  conferences: 17,
+  ugcCare: 4,
+  books: 1,
+  patents: 4,
 };
 
 export const profileLinks = [
@@ -59,9 +87,9 @@ export const heroSlides = [
     image: "/images/hero-office-cover.webp",
     headline: "Shaping Students. Building Futures.",
     subheading: "Dr. Pillareddy Vamsheedhar Reddy",
-    role: "Assistant Professor · CSE (AI & ML) · KMEC",
+    role: "Associate Professor · CSE (AI & ML) · KMEC",
     supporting:
-      "Nearly a decade of teaching, a Ph.D. from VIT-AP, and research that improves cloud–fog scheduling and applied AI.",
+      "Over 14 years of teaching, a Ph.D. in Cloud Computing from VIT University, and research spanning fog–cloud systems, deep learning, IoT, and cybersecurity.",
     size: "cover" as const,
   },
   {
@@ -70,16 +98,16 @@ export const heroSlides = [
     subheading: "Labs · Workshops · Student projects",
     role: "CSE (AI & ML) · Hands-on learning at KMEC",
     supporting:
-      "From IoT tinkering sessions to research writing seminars—building skills that transfer beyond the classroom.",
+      "Organizing and delivering IoT workshops while mentoring undergraduate and postgraduate students in intelligent computing.",
     size: "cover" as const,
   },
   {
     image: "/images/hero-ai-applications.webp",
     headline: "Academic Excellence with Integrity",
     subheading: "Research · Mentorship · Leadership",
-    role: "Publications, patents, and peer review across leading venues",
+    role: "22+ publications · 4 patents · Senior Member, IEEE & IAENG",
     supporting:
-      "Recognized for contributions in teaching, research, and academic service across national and international platforms.",
+      "Contributing to research, innovation, and academic excellence through teaching, publications, and professional service.",
     size: "cover" as const,
   },
 ];
@@ -87,14 +115,14 @@ export const heroSlides = [
 export const experience = [
   {
     org: "Keshav Memorial Engineering College",
-    role: "Assistant Professor",
+    role: "Associate Professor",
     dept: "CSE – AI & ML",
     period: "Aug 2023 – Present",
   },
   {
     org: "VIT-AP University",
     role: "Full-time Research Scholar (Ph.D.)",
-    dept: "School of Computer Science and Engineering",
+    dept: "School of Computer Science and Engineering · Cloud Computing",
     period: "Aug 2020 – Aug 2023",
   },
   {
@@ -131,8 +159,8 @@ export const education = [
     detail: "Computer Science and Engineering",
   },
   {
-    degree: "Ph.D. (Full-time)",
-    school: "VIT-AP University, Amaravati",
+    degree: "Ph.D. in Cloud Computing (Full-time)",
+    school: "VIT University (VIT-AP), Amaravati",
     period: "2020 – 2023",
     detail: "School of CSE · 8.1 CGPA",
   },
@@ -436,12 +464,12 @@ export const responsibilities = [
 ];
 
 export const researchTopics = [
-  "Task Scheduling",
-  "Workflow Scheduling",
-  "Cloud Computing",
   "Fog Computing",
-  "Machine Learning",
-  "Energy-efficient Systems",
+  "Cloud Computing",
+  "Deep Learning",
+  "Internet of Things (IoT)",
+  "Cybersecurity",
+  "Task & Workflow Scheduling",
 ];
 
 /** @deprecated use featuredAwards */

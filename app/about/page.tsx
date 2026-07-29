@@ -4,9 +4,12 @@ import Link from "next/link";
 import { PageHero } from "../components/PageHero";
 import { OutboundProfiles, RelatedPages } from "../components/SiteExtras";
 import {
+  biography,
   education,
   experience,
   gallery,
+  memberships,
+  publicationSummary,
   siteConfig,
   subjects,
 } from "../lib/content";
@@ -22,7 +25,7 @@ export default function AboutPage() {
     <main>
       <PageHero
         title="About & academic journey"
-        subtitle="From Wanaparthy, Telangana to a Ph.D. at VIT-AP—and teaching AI & ML in Hyderabad."
+        subtitle="Associate Professor in CSE (AI & ML) at KMEC, Hyderabad—Ph.D. in Cloud Computing from VIT University, with 14+ years of teaching and research."
         breadcrumbs={[{ label: "About", href: "/about" }]}
       />
 
@@ -40,17 +43,29 @@ export default function AboutPage() {
           </div>
           <div className="md:col-span-3">
             <h2 className="section-heading">Biography</h2>
-            <p className="prose-custom mb-4">
-              Born on 15 August 1991 in Wanaparthy district, Telangana,{" "}
-              {siteConfig.shortName} built a career grounded in perseverance,
-              discipline, and service through education.
+            {biography.map((para) => (
+              <p key={para.slice(0, 48)} className="prose-custom mb-4">
+                {para}
+              </p>
+            ))}
+            <p className="prose-custom mb-4 text-sm text-navy-light">
+              Publication record includes {publicationSummary.scie} SCIE journals,{" "}
+              {publicationSummary.scopus} Scopus journals,{" "}
+              {publicationSummary.conferences} international conference papers,{" "}
+              {publicationSummary.ugcCare} UGC CARE articles,{" "}
+              {publicationSummary.books} book, and {publicationSummary.patents}{" "}
+              patents.
             </p>
-            <p className="prose-custom mb-4">
-              With 9+ years of teaching and 3 years of full-time doctoral
-              research, he combines classroom excellence with applied research
-              in cloud computing and machine learning. He currently serves as{" "}
-              {siteConfig.role} at {siteConfig.institution}.
-            </p>
+            <ul className="flex flex-wrap gap-2 mb-4">
+              {memberships.map((m) => (
+                <li
+                  key={m}
+                  className="px-3 py-1.5 bg-navy/5 border border-gold/30 rounded-full text-sm font-medium text-navy"
+                >
+                  {m}
+                </li>
+              ))}
+            </ul>
             <p className="prose-custom">
               Explore his{" "}
               <Link href="/research" className="link-gold">

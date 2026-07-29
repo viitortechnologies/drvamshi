@@ -12,7 +12,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Research",
-  description: `Publications, patents, and research interests of ${siteConfig.name} in cloud computing, workflow scheduling, fog computing, and AI/ML.`,
+  description: `Publications, patents, and research interests of ${siteConfig.name} in fog computing, cloud computing, deep learning, IoT, and cybersecurity.`,
   alternates: { canonical: "/research" },
 };
 
@@ -21,7 +21,7 @@ export default function ResearchPage() {
     <main>
       <PageHero
         title="Research & scholarship"
-        subtitle="Efficient task and workflow scheduling in cloud–fog environments, energy-aware systems, and applied machine learning."
+        subtitle="Fog and cloud computing, deep learning, IoT, and cybersecurity—with 22+ publications, four patents, and one book."
         breadcrumbs={[{ label: "Research", href: "/research" }]}
       />
 
@@ -30,17 +30,19 @@ export default function ResearchPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="section-heading">Research statement</h2>
           <p className="prose-custom mb-4">
-            Scheduling in cloud computing is an NP-hard challenge.{" "}
-            {siteConfig.shortName}&apos;s work develops efficient multi-objective
-            and reinforcement-learning approaches that improve resource
-            utilization, reduce energy consumption, and strengthen system
-            performance for academia and industry.
+            {siteConfig.shortName}&apos;s research spans Fog Computing, Cloud
+            Computing, Deep Learning, Internet of Things (IoT), and Cybersecurity.
+            He develops efficient scheduling and intelligent-computing approaches
+            that improve resource utilization and system performance for academia
+            and industry.
           </p>
           <p className="prose-custom mb-6">
-            Findings appear in SCIE journals such as{" "}
-            <em>Expert Systems with Applications</em>, <em>IEEE Access</em>, and{" "}
-            <em>Applied Sciences</em>, with additional IEEE conference papers and
-            Indian patents. Full lists are mirrored on{" "}
+            His record includes 6 SCIE-indexed journal articles, 2 Scopus-indexed
+            journal articles, 17 international conference papers, 4 UGC CARE
+            journal articles, one book, and four patents. Selected work appears in
+            venues such as <em>Expert Systems with Applications</em>,{" "}
+            <em>IEEE Access</em>, and <em>Applied Sciences</em>. Full lists are
+            mirrored on{" "}
             <a
               href="https://scholar.google.com/citations?user=1DD-5EAAAAAJ&hl=en"
               target="_blank"
