@@ -9,13 +9,13 @@ export const siteConfig = {
   phone: "+91 99853 62363",
   siteUrl: "https://drvamshi.vercel.app",
   description:
-    "Associate Professor in CSE (AI & ML) at Keshav Memorial Engineering College, Hyderabad. Ph.D. in Cloud Computing from VIT University, with 14+ years of teaching, 22+ publications, four patents, and research in fog/cloud computing, deep learning, IoT, and cybersecurity.",
+    "Associate Professor in CSE (AI & ML) at Keshav Memorial Engineering College, Hyderabad. Ph.D. in Cloud Computing from VIT University, with 14+ years of teaching, 22+ publications, four patents, co-author of Internet of Things & Its Applications, and research in fog/cloud computing, deep learning, IoT, and cybersecurity.",
 };
 
 /** Full professional biography used on About and related pages */
 export const biography = [
   "Dr. Pillareddy Vamsheedhar Reddy is an Associate Professor in the Department of Computer Science and Engineering (Artificial Intelligence & Machine Learning) at Keshav Memorial Engineering College, Hyderabad. He received his Ph.D. in Cloud Computing from VIT University. With over 14 years of teaching experience, he has made significant contributions to teaching and research in emerging computing technologies.",
-  "He has authored 6 SCIE-indexed journal articles, 2 Scopus-indexed journal articles, 17 international conference papers, 4 UGC CARE journal articles, one book, and holds four patents. He has organized and delivered several workshops on the Internet of Things (IoT) at academic institutions.",
+  "He has authored 6 SCIE-indexed journal articles, 2 Scopus-indexed journal articles, 17 international conference papers, 4 UGC CARE journal articles, and holds four patents—including the co-authored book Internet of Things & Its Applications (Groovi Techno IT Solution, ISBN 978-93-6368-015-9). He has organized and delivered several workshops on IoT at academic institutions.",
   "His research interests include Fog Computing, Cloud Computing, Deep Learning, Internet of Things (IoT), and Cybersecurity. He actively mentors undergraduate and postgraduate students and collaborates on research in intelligent computing. Dr. Reddy is a Senior Member of IEEE and IAENG and continues to contribute to research, innovation, and academic excellence through teaching, publications, and professional service.",
 ];
 
@@ -38,6 +38,41 @@ export const publicationSummary = {
   ugcCare: 4,
   books: 1,
   patents: 4,
+};
+
+/** Published book — Groovi Techno IT Solution */
+export const publishedBook = {
+  title: "Internet of Things & Its Applications",
+  publisher: "Groovi Techno IT Solution Private Limited",
+  isbn: "978-93-6368-015-9",
+  price: "₹150",
+  publishedDate: "24 June 2026",
+  coverImage: "/images/book-iot-cover.webp",
+  publisherAddress:
+    "H.No.18-161/1, Road No.05, Chaitanya, Chaitanyapuri, Hyderabad, TG-500035",
+  publisherPhone: "+91 97005 09433",
+  authors: [
+    {
+      name: "Mr. Gudimella Sai Ram",
+      role: "Co-Author",
+      bio: "Assistant Professor, ECE, Siddhartha Institute of Engineering and Technology (Autonomous), Ibrahimpatnam, Hyderabad. M.Tech in Digital Electronics and Communication Systems; pursuing Ph.D. at KL University. 10+ years teaching; 14 research papers, 5 patents, 2 design patents, and 2 book publications. Research: IoT, communication systems, signal processing, embedded systems, and VLSI design.",
+    },
+    {
+      name: "Mr. Mohammad Gandhi Babu",
+      role: "Co-Author",
+      bio: "Assistant Professor, ECE, AVN Institute of Engineering and Technology (Autonomous), Ibrahimpatnam, Hyderabad. M.Tech in VLSI & Embedded Systems; pursuing Ph.D. at KL University. 10+ years teaching; 8 research papers and 1 patent. Lifetime member of IETE, ISTE, and IAENG. Research: IoT, VLSI design, communication systems, and embedded systems.",
+    },
+    {
+      name: "Dr. P. Vamsheedhar Reddy",
+      role: "Co-Author",
+      bio: "Associate Professor, CSE (AI & ML), Keshav Memorial Engineering College, Hyderabad. Ph.D. in Cloud Computing from VIT University. 14+ years teaching; 6 SCIE-indexed journal papers, 14 international conference papers, and 4 patents. Research: fog computing, cloud computing, deep learning, IoT, and cybersecurity. Senior Member of IEEE and IAENG.",
+    },
+    {
+      name: "Mr. Y. Raju",
+      role: "Co-Author",
+      bio: "Assistant Professor, ECE, Sri Indu Institute of Engineering and Technology (Autonomous), Ibrahimpatnam, Hyderabad. M.Tech in VLSI System Design. 10 years teaching; 10 research papers and 3 patents. Member of IAENG and IRED. Research: IoT, communication systems, signal processing, embedded systems, and VLSI design.",
+    },
+  ],
 };
 
 export const profileLinks = [

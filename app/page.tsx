@@ -5,6 +5,7 @@ import {
   featuredAwards,
   impactStats,
   journals,
+  publishedBook,
   researchTopics,
   siteConfig,
   subjects,
@@ -87,7 +88,8 @@ export default function HomePage() {
               <h2 className="section-heading mb-2">Research spotlight</h2>
               <p className="prose-custom">
                 Fog and cloud computing, deep learning, IoT, and cybersecurity—with
-                22+ publications and four patents.
+                22+ publications, four patents, and the co-authored book{" "}
+                <em>{publishedBook.title}</em>.
               </p>
             </div>
             <Link href="/research" className="link-gold font-medium whitespace-nowrap">

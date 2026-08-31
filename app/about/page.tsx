@@ -10,6 +10,7 @@ import {
   gallery,
   memberships,
   publicationSummary,
+  publishedBook,
   siteConfig,
   subjects,
 } from "../lib/content";
@@ -53,7 +54,11 @@ export default function AboutPage() {
               {publicationSummary.scopus} Scopus journals,{" "}
               {publicationSummary.conferences} international conference papers,{" "}
               {publicationSummary.ugcCare} UGC CARE articles,{" "}
-              {publicationSummary.books} book, and {publicationSummary.patents}{" "}
+              {publicationSummary.books} book (
+              <Link href="/research#published-book" className="link-gold">
+                {publishedBook.title}
+              </Link>
+              , ISBN {publishedBook.isbn}), and {publicationSummary.patents}{" "}
               patents.
             </p>
             <ul className="flex flex-wrap gap-2 mb-4">
