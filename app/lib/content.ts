@@ -78,8 +78,109 @@ export const navPages = [
   { label: "About", href: "/about" },
   { label: "Research", href: "/research" },
   { label: "Awards", href: "/awards" },
+  { label: "Foundation", href: "/foundation" },
   { label: "Contact", href: "/contact" },
 ] as const;
+
+export const foundationConfig = {
+  name: "Sri Sarevepally Radhakrishnan Foundation",
+  shortName: "SSR Foundation",
+  tagline: "Empowering Education. Honouring Teachers. Transforming Lives.",
+  relaunchDate: "5 September 2026",
+  relaunchNote: "Re-launching on 5 September 2026 on the occasion of Teachers' Day.",
+  email: "info@srisrfoundation.org",
+  phone: "+91 98765 43210",
+  address: "Hyderabad, Telangana, India",
+  website: "www.srisrfoundation.org",
+  quote:
+    "The true teachers are those who help us think for ourselves.",
+  quoteAuthor: "Dr. Sarvepalli Radhakrishnan",
+};
+
+export const foundationAbout =
+  "The Sri Sarevepally Radhakrishnan Foundation is a social initiative committed to promoting education, supporting teachers, and empowering students. Inspired by the values of Dr. Sarvepalli Radhakrishnan, the foundation works to create opportunities for learning, growth, and community development.";
+
+export const foundationVision =
+  "To create a society where every individual has access to quality education, innovation, and equal opportunity to succeed.";
+
+export const foundationMission =
+  "To empower students, honour teachers, and implement sustainable initiatives that uplift communities through education and service.";
+
+export const foundationFounders = [
+  {
+    name: "B. Pavan Kumar",
+    role: "Founder",
+    bio: "A passionate individual with a vision to create positive change in society through education and service.",
+    image: null as string | null,
+    initials: "BP",
+  },
+  {
+    name: "P. Vamsheedhar Reddy",
+    role: "Co-Founder",
+    bio: "Dedicated to empowering young minds and driving innovation for a better tomorrow. Associate Professor in CSE (AI & ML) and educator-researcher with 14+ years of experience.",
+    image: "/images/portrait-pro.webp",
+    initials: "PV",
+  },
+];
+
+export const foundationInitiatives = [
+  {
+    title: "Education for All",
+    items: [
+      "Scholarships for deserving students",
+      "Distribution of educational materials",
+      "Support for rural and underprivileged learners",
+    ],
+  },
+  {
+    title: "Teacher Appreciation",
+    items: [
+      "Teacher Excellence Awards",
+      "Teachers' Day celebrations",
+      "Recognition of outstanding educators",
+    ],
+  },
+  {
+    title: "Student Development",
+    items: [
+      "Career guidance programs",
+      "Skill development workshops",
+      "Mentorship and academic support",
+    ],
+  },
+  {
+    title: "Research & Innovation",
+    items: [
+      "Support for research activities",
+      "Innovation and project challenges",
+      "Academic collaboration opportunities",
+    ],
+  },
+  {
+    title: "Community Service",
+    items: [
+      "Educational outreach programs",
+      "Donation and support drives",
+      "Community upliftment initiatives",
+    ],
+  },
+  {
+    title: "Women & Youth Empowerment",
+    items: [
+      "Skill development for youth",
+      "Leadership and empowerment programs",
+      "Inclusive education initiatives",
+    ],
+  },
+];
+
+export const foundationRelaunchEvents = [
+  "Teacher Excellence Awards",
+  "Student Scholarships & Awards",
+  "Distribution of Educational Materials",
+  "Awareness & Inspiration Sessions",
+  "Foundation Membership Launch",
+];
 
 /** Hero slides — landscape Assets only (3:2 frame) */
 export const heroSlides = [
