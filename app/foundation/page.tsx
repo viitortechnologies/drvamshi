@@ -4,6 +4,7 @@ import Link from "next/link";
 import { PageHero } from "../components/PageHero";
 import { RelatedPages } from "../components/SiteExtras";
 import {
+  foundationActiveEvents,
   foundationAbout,
   foundationConfig,
   foundationFounders,
@@ -64,7 +65,7 @@ export default function FoundationPage() {
             {foundationFounders.map((person) => (
               <article
                 key={person.name}
-                className="reveal-child text-center p-8 rounded-xl border border-gray-200 bg-[#fafaf8] shadow-sm"
+                className="reveal-child text-center p-8 rounded-xl border-2 border-gold/35 bg-[#fafaf8] shadow-md ring-1 ring-gold/10"
               >
                 <div className="relative w-28 h-28 mx-auto mb-5 rounded-full overflow-hidden border-2 border-gold/40 bg-navy/5 flex items-center justify-center">
                   {person.image ? (
@@ -117,6 +118,44 @@ export default function FoundationPage() {
                     </li>
                   ))}
                 </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Active events */}
+      <section data-reveal className="py-14 md:py-20 bg-[linear-gradient(180deg,#eef6f4_0%,#f8f6f1_100%)] border-y border-teal/20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal/10 border border-teal/25 text-teal text-xs font-semibold uppercase tracking-wide mb-4">
+              <span className="h-2 w-2 rounded-full bg-teal animate-pulse" aria-hidden />
+              Year-round activity
+            </span>
+            <h2 className="section-heading mb-3">Events & ongoing programs</h2>
+            <p className="prose-custom mx-auto">
+              The foundation is always active—hosting scholarships, teacher
+              recognition, outreach drives, and inspiration sessions across the
+              calendar, not just on special occasions.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {foundationActiveEvents.map((event) => (
+              <article
+                key={event.title}
+                className="reveal-child p-5 bg-white rounded-xl border border-gray-200 shadow-sm h-full flex flex-col"
+              >
+                <div className="flex items-start justify-between gap-2 mb-2">
+                  <h3 className="font-serif text-lg font-semibold text-navy leading-snug">
+                    {event.title}
+                  </h3>
+                  <span className="shrink-0 text-[10px] uppercase tracking-wide font-semibold text-teal bg-teal/10 px-2 py-0.5 rounded-full">
+                    {event.cadence}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-700 leading-relaxed flex-1">
+                  {event.description}
+                </p>
               </article>
             ))}
           </div>

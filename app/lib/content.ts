@@ -141,18 +141,70 @@ export const foundationVision =
 export const foundationMission =
   "To empower students, honour teachers, and implement sustainable initiatives that uplift communities through education and service.";
 
+export const foundationVisionPoints = [
+  "Supporting underprivileged students",
+  "Promoting value-based education",
+  "Encouraging knowledge sharing",
+  "Strengthening social responsibility through education",
+];
+
+export const foundationHomeIntro = [
+  "Dr. Radhakrishnan Foundation was established with the support of like-minded friends who share a vision of education-driven social upliftment.",
+  "Guided by the ideals of Dr. Sarvepalli Radhakrishnan, the foundation works year-round to bridge educational gaps, honour educators, and create pathways for students who need guidance and support.",
+  "From scholarship drives and Teachers' Day celebrations to awareness sessions and community outreach, the foundation stays actively engaged—organising events, mentoring learners, and building partnerships that keep education at the centre of social progress.",
+];
+
+export const foundationActiveEvents = [
+  {
+    title: "Teachers' Day & Educator Recognition",
+    description:
+      "Annual celebrations honouring outstanding teachers, with awards and appreciation ceremonies across partner institutions.",
+    cadence: "Every September",
+  },
+  {
+    title: "Student Scholarship & Awards Drives",
+    description:
+      "Merit- and need-based scholarships paired with recognition for academic excellence and community service.",
+    cadence: "Quarterly",
+  },
+  {
+    title: "Educational Material Distribution",
+    description:
+      "Books, stationery, and learning resources delivered to rural and underprivileged students.",
+    cadence: "Ongoing",
+  },
+  {
+    title: "Awareness & Inspiration Sessions",
+    description:
+      "Talks, panel discussions, and mentorship circles on career guidance, values, and lifelong learning.",
+    cadence: "Monthly",
+  },
+  {
+    title: "Community Outreach Programs",
+    description:
+      "Educational camps, donation drives, and volunteer-led initiatives that connect students with real-world impact.",
+    cadence: "Throughout the year",
+  },
+  {
+    title: "Foundation Membership & Volunteer Drives",
+    description:
+      "Welcoming educators, professionals, and students to join hands and expand the foundation's reach.",
+    cadence: "Rolling enrollment",
+  },
+];
+
 export const foundationFounders = [
   {
     name: "B. Pavan Kumar",
     role: "Founder",
-    bio: "A passionate individual with a vision to create positive change in society through education and service.",
+    bio: "A passionate leader with a vision to create lasting social change through education, service, and community collaboration.",
     image: null as string | null,
     initials: "BP",
   },
   {
     name: "P. Vamsheedhar Reddy",
     role: "Co-Founder",
-    bio: "Dedicated to empowering young minds and driving innovation for a better tomorrow. Associate Professor in CSE (AI & ML) and educator-researcher with 14+ years of experience.",
+    bio: "Associate Professor in CSE (AI & ML) and educator-researcher with 14+ years of experience, dedicated to empowering young minds and driving innovation for a better tomorrow.",
     image: "/images/portrait-pro.webp",
     initials: "PV",
   },

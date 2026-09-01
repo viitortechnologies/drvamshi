@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Foundation from "./components/Foundation";
 import HeroSlider from "./components/HeroSlider";
 import {
   featuredAwards,
@@ -243,6 +244,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <Foundation />
 
       <OutboundProfiles />
 
