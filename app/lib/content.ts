@@ -457,6 +457,16 @@ export const patents = [
   },
 ];
 
+/** Submitted and funded research proposals — add entries as they are finalized */
+export const researchProposals: {
+  title: string;
+  agency: string;
+  status: string;
+  year: string;
+  role?: string;
+  description?: string;
+}[] = [];
+
 /** Featured awards — each unique; cards share landscape 4:3 frame */
 export const featuredAwards = [
   {
