@@ -132,6 +132,18 @@ export const foundationConfig = {
   quoteAuthor: "Dr. Sarvepalli Radhakrishnan",
 };
 
+/** Namesake and guiding inspiration for the foundation */
+export const foundationInspiration = {
+  name: "Dr. Sarvepalli Radhakrishnan",
+  title: "Philosopher · Educator · Former President of India",
+  image: "/images/foundation-radhakrishnan.webp",
+  paragraphs: [
+    "The foundation is named in honour of Dr. Sarvepalli Radhakrishnan, one of India's most respected philosophers, scholars, and statesmen. A devoted teacher before he entered public life, he served as the second President of India and remains a symbol of intellectual integrity and moral leadership.",
+    "He believed that education should build character as well as knowledge, and that teachers hold a sacred responsibility in shaping young minds. His conviction that \"teachers should be the best minds in the country\" continues to inspire educators across the nation.",
+    "In India, his birthday—5 September—is celebrated as Teachers' Day, a tradition that reflects the deep respect he held for the teaching profession. Our foundation draws from that same spirit: honouring teachers, supporting students, and serving society through education.",
+  ],
+};
+
 export const foundationAbout =
   "The Sri Sarevepally Radhakrishnan Foundation is a social initiative committed to promoting education, supporting teachers, and empowering students. Inspired by the values of Dr. Sarvepalli Radhakrishnan, the foundation works to create opportunities for learning, growth, and community development.";
 
@@ -197,14 +209,22 @@ export const foundationFounders = [
   {
     name: "B. Pavan Kumar",
     role: "Founder",
-    bio: "A passionate leader with a vision to create lasting social change through education, service, and community collaboration.",
-    image: null as string | null,
+    bio: [
+      "B. Pavan Kumar is remembered for his values, kindness, and the positive impact he made on the lives of those around him.",
+      "Though he passed away in 2023, his memory continues to inspire us. The foundation is committed to carrying forward his values and vision through meaningful initiatives that contribute to society.",
+      "His life may have ended, but his legacy continues through every life we touch.",
+    ],
+    image: "/images/foundation-founder-pavan.webp",
     initials: "BP",
   },
   {
     name: "P. Vamsheedhar Reddy",
     role: "Co-Founder",
-    bio: "Associate Professor in CSE (AI & ML) and educator-researcher with 14+ years of experience, dedicated to empowering young minds and driving innovation for a better tomorrow.",
+    bio: [
+      "Dr. P. Vamsheedhar Reddy is an Associate Professor in CSE (AI & ML) at Keshav Memorial Engineering College, Hyderabad, with a Ph.D. in Cloud Computing from VIT University and over 14 years of teaching and research experience.",
+      "As Co-Founder, he works to advance the foundation's mission—supporting students, honouring teachers, and building programs that create lasting educational impact in communities across Telangana.",
+      "Guided by the ideals of Dr. Sarvepalli Radhakrishnan and the vision of B. Pavan Kumar, he remains dedicated to empowering young minds, mentoring learners, and driving innovation for a better tomorrow.",
+    ],
     image: "/images/portrait-pro.webp",
     initials: "PV",
   },

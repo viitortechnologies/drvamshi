@@ -9,6 +9,7 @@ import {
   foundationConfig,
   foundationFounders,
   foundationInitiatives,
+  foundationInspiration,
   foundationMission,
   foundationRelaunchEvents,
   foundationVision,
@@ -37,6 +38,53 @@ export default function FoundationPage() {
         </div>
       </section>
 
+      {/* Inspiration */}
+      <section data-reveal className="py-14 md:py-20 bg-white border-b border-gray-200/80">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+            <article className="reveal-child">
+              <div className="relative aspect-[3/4] max-w-sm mx-auto lg:mx-0 w-full rounded-xl overflow-hidden border border-gray-200 shadow-md bg-[#1e4d8c]">
+                <Image
+                  src={foundationInspiration.image}
+                  alt={`${foundationInspiration.name} — portrait`}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 90vw, 400px"
+                />
+              </div>
+              <figcaption className="mt-4 text-center lg:text-left">
+                <h2 className="font-serif text-xl font-semibold text-navy">
+                  {foundationInspiration.name}
+                </h2>
+                <p className="text-sm text-gold font-medium mt-1">
+                  {foundationInspiration.title}
+                </p>
+              </figcaption>
+            </article>
+
+            <article className="reveal-child">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold mb-2">
+                Our inspiration
+              </p>
+              <h2 className="section-heading mb-4">Guided by a great educator</h2>
+              <div className="space-y-4 mb-6">
+                {foundationInspiration.paragraphs.map((para) => (
+                  <p key={para.slice(0, 48)} className="prose-custom">
+                    {para}
+                  </p>
+                ))}
+              </div>
+              <blockquote className="border-l-4 border-gold pl-4 italic text-navy/90 font-serif">
+                &ldquo;{foundationConfig.quote}&rdquo;
+              </blockquote>
+              <cite className="text-sm text-gold font-medium not-italic mt-2 block">
+                — {foundationConfig.quoteAuthor}
+              </cite>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* About · Vision · Mission */}
       <section data-reveal className="py-14 md:py-20 bg-[linear-gradient(180deg,#faf8f4_0%,#f3f5f8_100%)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -61,34 +109,38 @@ export default function FoundationPage() {
       <section data-reveal className="py-14 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <h2 className="section-heading text-center mb-10">Our Founders</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             {foundationFounders.map((person) => (
               <article
                 key={person.name}
-                className="reveal-child text-center p-8 rounded-xl border-2 border-gold/35 bg-[#fafaf8] shadow-md ring-1 ring-gold/10"
+                className="reveal-child flex flex-col h-full p-8 rounded-xl border-2 border-gold/35 bg-[#fafaf8] shadow-md ring-1 ring-gold/10"
               >
-                <div className="relative w-28 h-28 mx-auto mb-5 rounded-full overflow-hidden border-2 border-gold/40 bg-navy/5 flex items-center justify-center">
+                <div className="relative w-32 h-32 mx-auto mb-5 rounded-full overflow-hidden border-2 border-gold/40 bg-navy/5 shrink-0">
                   {person.image ? (
                     <Image
                       src={person.image}
                       alt={person.name}
                       fill
                       className="object-cover object-[center_20%]"
-                      sizes="112px"
+                      sizes="128px"
                     />
                   ) : (
-                    <span className="font-serif text-2xl font-semibold text-navy">
+                    <span className="absolute inset-0 flex items-center justify-center font-serif text-2xl font-semibold text-navy">
                       {person.initials}
                     </span>
                   )}
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-navy mb-1">
+                <h3 className="font-serif text-xl font-semibold text-navy mb-1 text-center">
                   {person.name}
                 </h3>
-                <p className="text-gold font-semibold text-sm uppercase tracking-wide mb-3">
+                <p className="text-gold font-semibold text-sm uppercase tracking-wide mb-4 text-center">
                   {person.role}
                 </p>
-                <p className="text-gray-700 text-sm leading-relaxed">{person.bio}</p>
+                <div className="text-gray-700 text-sm leading-relaxed space-y-3 text-left flex-1">
+                  {person.bio.map((para) => (
+                    <p key={para.slice(0, 40)}>{para}</p>
+                  ))}
+                </div>
               </article>
             ))}
           </div>
