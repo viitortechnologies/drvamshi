@@ -211,7 +211,7 @@ export const foundationFounders = [
     role: "Founder",
     bio: [
       "B. Pavan Kumar is remembered for his values, kindness, and the positive impact he made on the lives of those around him.",
-      "Though he passed away in 2023, his memory continues to inspire us. The foundation is committed to carrying forward his values and vision through meaningful initiatives that contribute to society.",
+      "Though he passed away in 2013, his memory continues to inspire us. The foundation is committed to carrying forward his values and vision through meaningful initiatives that contribute to society.",
       "His life may have ended, but his legacy continues through every life we touch.",
     ],
     image: "/images/foundation-founder-pavan.webp",
