@@ -118,7 +118,7 @@ export const navPages = [
 ] as const;
 
 export const foundationConfig = {
-  name: "Sri Sarevepally Radhakrishnan Foundation",
+  name: "Sri Sarvepally Radhakrishnan Foundation",
   shortName: "SSR Foundation",
   tagline: "Empowering Education. Honouring Teachers. Transforming Lives.",
   relaunchDate: "5 September 2026",
@@ -145,7 +145,7 @@ export const foundationInspiration = {
 };
 
 export const foundationAbout =
-  "The Sri Sarevepally Radhakrishnan Foundation is a social initiative committed to promoting education, supporting teachers, and empowering students. Inspired by the values of Dr. Sarvepalli Radhakrishnan, the foundation works to create opportunities for learning, growth, and community development.";
+  "The Sri Sarvepally Radhakrishnan Foundation is a social initiative committed to promoting education, supporting teachers, and empowering students. Inspired by the values of Dr. Sarvepalli Radhakrishnan, the foundation works to create opportunities for learning, growth, and community development.";
 
 export const foundationVision =
   "To create a society where every individual has access to quality education, innovation, and equal opportunity to succeed.";
